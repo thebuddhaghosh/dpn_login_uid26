@@ -4,22 +4,123 @@ body {
   place-items: center;
   // background-image: url('../img/log-penoromic.png');
   // animation: panoramic-bg 80s linear infinite;
-  background-image: url('../img/bgpn.png');
+  // background-image: url('../img/bgpn.png');
   animation: panoramic-bg 580s linear infinite;
   background-size: cover;
   background-position-x: 0%;
   background-repeat: repeat-y;
   position: relative;
   align-content: center;
+  .border-left-0 {
+    border-left: none !important;
+  }
   .panoramic-bg {
     position: relative;
     z-index: 1;
     max-width: 820px;
-    border-radius: 30px;
+    width: 100%;
+    z-index: 9;
     box-shadow: 0 2px 10px rgba($color: #ffffff, $alpha: 0.7);
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 100%;
+      height: 560px;
+      border-radius: 30px;
+      background-image: url('../img/login.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 1;
+      opacity: 0.1;
+    }
     img {
       width: 100%;
       height: auto;
+    }
+    .login-form {
+      height: 100%;
+      background: #ffffff url('../img/login/rightTxture.png');
+      background-repeat: no-repeat;
+      background-size: 100% 105%;
+      background-position: center;
+      .form-label {
+        font-weight: 600;
+        font-size: 14px;
+      }
+      .forget-ps {
+        font-size: 13px;
+        color: #0055ff;
+      }
+      .brandings {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        position: relative;
+        img {
+          max-width: 100px;
+          &.upseal {
+            margin-left: 50px;
+            max-width: 70px;
+          }
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 52.5%;
+          background-color: #e2e2e2;
+          transform: translate(-50%, -50%);
+          width: 2px;
+          height: 50px;
+        }
+      }
+      .btn {
+        font-size: 14px;
+        font-weight: 600;
+        border-radius: 0;
+        &:focus {
+          box-shadow: none;
+        }
+      }
+      .form-control {
+        font-size: 14px;
+        border-radius: 0;
+        &[type='password'] {
+          border-right: none !important;
+        }
+      }
+      .input-group {
+        &.user {
+          .input-group-prepend {
+            .input-group-text {
+              background-color: transparent;
+              height: 100%;
+              border-radius: 0;
+            }
+          }
+        }
+      }
+      .pch-login {
+        border: 1px dashed #e2e2e2;
+        p {
+          font-size: 11px;
+          font-weight: 700;
+        }
+        small {
+          display: block;
+          margin-top: 4px;
+          font-size: 11px;
+        }
+        a {
+          color: #0055ff;
+        }
+      }
     }
   }
   .right-sticky-actions {

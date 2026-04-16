@@ -10,7 +10,49 @@
   </head>
   <body>
     <div class="panoramic-bg">
-      <img src="./img/login.png" alt="" class="img-fluid" />
+      <div class="row">
+        <div class="col-md-6 p-0">
+          <img src="./img/login/logleft.png" alt="dashboard ui" class="img-fluid w-100 h-100 ms-auto" />
+        </div>
+        <div class="col-md-6 p-0">
+          <div class="login-form p-2 px-4">
+            <div class="brandings">
+              <img src="./img/login/dpnLogo.png" alt="up logo" class="img-fluid" />
+              <img src="./img/login/sealUp.png" alt="up logo" class="img-fluid upseal" />
+            </div>
+            <form>
+              <div class="mb-3">
+                <label for="username" class="form-label">Email</label>
+                <div class="input-group user mb-2">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="fa-regular fa-user"></i></div>
+                  </div>
+                  <input type="text" class="form-control" id="username" placeholder="Enter your email" />
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <div class="input-group user mb-2">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="fa-solid fa-lock"></i></div>
+                  </div>
+                  <input type="password" class="form-control" id="password" placeholder="Enter your password" />
+                  <div class="input-group-prepend">
+                    <div class="input-group-text border-left-0"><i class="fa-regular fa-eye"></i></div>
+                  </div>
+                </div>
+                <a href="#" class="text-decoration-none d-block text-end forget-ps">Forgot Password ?</a>
+              </div>
+              <button type="submit" class="btn btn-warning rounded-0 w-100">Login</button>
+              <div class="pch-login text-center mt-3 p-2">
+                <a href="#" class="text-decoration-none d-block mb-2"><img src="img/login/parichay.png" alt="parichay-login" class="img-fluid" /></a>
+                <p class="mb-0">User Having @nic.in & @gov.in IDs can directly Login with Parichay</p>
+                <small>For ease of user onboarding, DARPAN has now been integrated with the <strong class="d-block">NIC SSO Platform (Parichay).</strong></small>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="right-sticky-actions">
       <button class="btn btn-danger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="fa-solid fa-info"></i></button>
