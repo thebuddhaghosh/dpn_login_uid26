@@ -56,15 +56,17 @@
     </div>
     <div class="right-sticky-actions">
       <button class="btn btn-danger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="fa-solid fa-info"></i></button>
-      <a href="https://www.up.gov.in/CM_Dashboard.aspx" target="_blank" class="btn btn-info"><i class="fa-solid fa-file-lines"></i></a>
-      <a href="https://www.up.gov.in/CM_Dashboard.aspx" target="_blank" class="btn btn-warning m-0"><i class="fa-solid fa-images"></i></a>
+      <button class="btn btn-info" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFeatures" aria-controls="offcanvasFeatures"><i class="fa-solid fa-file-lines"></i></button>
+      <button class="btn btn-warning" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasGallery" aria-controls="offcanvasGallery"><i class="fa-solid fa-images"></i></button>
+      <!-- <a href="https://www.up.gov.in/CM_Dashboard.aspx" target="_blank" class="btn btn-info"><i class="fa-solid fa-file-lines"></i></a> -->
+      <!-- <a href="https://www.up.gov.in/CM_Dashboard.aspx" target="_blank" class="btn btn-warning m-0"><i class="fa-solid fa-images"></i></a> -->
     </div>
     <footer class="text-center py-3 mt-5">
       <p>Content of <strong>Uttar Pradesh CM Dashboard</strong> is published, managed and owned by Respective Departments.</p>
       <p>&copy; <span id="year"></span> DARPAN Dashboard Services brought to you by National Informatics Centre, Ministry of Electronics & Information Technology, Government of India.</p>
     </footer>
-
-    <div class="offcanvas offcanvas-end loginOffcanvas" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+    <!-- ============================= Other Additional Details ============================ -->
+    <div class="offcanvas about-darpan offcanvas-end loginOffcanvas" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
       <div class="offcanvas-header">
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
@@ -72,8 +74,72 @@
         <div class="ui-view">
           <img src="./img/dashui.png" alt="dashboard ui" class="img-fluid mb-3 ms-auto" />
         </div>
-        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
-        <p>Try scrolling the rest of the page to see this option in action.</p>
+        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+          About Darpan
+          <span class="d-block offcanvas-subtitle">Transforming complex government data into compelling visuals</span>
+        </h5>
+        <p class="text-1">
+          "<strong>DARPAN</strong>, a Dashboard for Analytical Review of Projects Across Nation, transform complex government data into compelling visuals. It gives the administration a tool, which is needed to deliver real-time, dynamic project monitoring without coding or
+          programming through web services. It enhance the analytical capabilities through data collection by consolidating multiple data sources into one centralized, easy-to-access platform. It immediately identifies trends and quickly drilldowns into data to gain enhanced
+          perspectives of the district level projects. DARPAN displays information in an objective and quantifiable way that helps the administration to see and understand not only its success, but also its pain points and areas in need of improvement.
+        </p>
+        <p class="text-1">
+          "<strong>DARPAN</strong>, is meant to provide administration, at a glance, the status of different departmental activities with an architecture for presenting dash board in respect to the monitoring of schemes upto the district level. The Important fact of the
+          architecture of the dash board is that it has been hosted on common framework for the entire country. "
+        </p>
+        <a href="http://darpan.nic.in" target="_blank" rel="noopener noreferrer" class="btn btn-info rounded-0 d-inline-flex align-items-center gap-2 mt-3 text-white"
+          >Know More
+          <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M8.83175 0.214791C9.10742 -0.0715969 9.55426 -0.0715969 9.82993 0.214791L14.4182 4.9815C14.6939 5.26789 14.6939 5.73211 14.4182 6.01849L9.82993 10.7852C9.55426 11.0716 9.10742 11.0716 8.83175 10.7852C8.55608 10.4988 8.55608 10.0346 8.83175 9.74822L12.921 5.5L8.83175 1.25178C8.55608 0.965393 8.55608 0.501178 8.83175 0.214791Z"
+              fill="white"
+              style="fill: white; fill-opacity: 1" />
+            <path d="M13.625 5.5H0.625" stroke="white" style="stroke: white; stroke-opacity: 1" stroke-width="1.25" stroke-linecap="round" />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <!-- ========================================================== -->
+    <div class="offcanvas gallery-container offcanvas-end loginOffcanvas" data-bs-scroll="true" tabindex="-1" id="offcanvasGallery" aria-labelledby="offcanvasGalleryLabel">
+      <div class="offcanvas-header">
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <h5 class="offcanvas-title" id="offcanvasGalleryLabel">About Darpan</h5>
+        <div class="gallery-container">
+          <div class="row g-2">
+            <div class="col-md-6">
+              <img src="img1.jpg" class="gallery-img" onclick="openImage(this.src)" />
+            </div>
+            <div class="col-md-6">
+              <img src="img2.jpg" class="gallery-img" onclick="openImage(this.src)" />
+            </div>
+            <div class="col-md-6">
+              <img src="img3.jpg" class="gallery-img" onclick="openImage(this.src)" />
+            </div>
+            <div class="col-md-6">
+              <img src="img4.jpg" class="gallery-img" onclick="openImage(this.src)" />
+            </div>
+            <div class="col-md-12">
+              <img src="img5.jpg" class="gallery-img" style="height: 220px" onclick="openImage(this.src)" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal gallerymodal fade" id="imageModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-transparent border-0">
+          <div class="d-flex justify-content-between align-items-center">
+            <span></span>
+            <h6 class="gallery-title">GALLERY VIEW</h6>
+            <button class="btn-close"></button>
+          </div>
+          <div class="modal-body text-center p-0">
+            <img id="modalImage" class="modal-img" />
+          </div>
+        </div>
       </div>
     </div>
     <!-- ========================================================== -->
@@ -83,6 +149,16 @@
       const yearSpan = document.getElementById('year');
       const currentYear = new Date().getFullYear();
       yearSpan.textContent = currentYear;
+    </script>
+
+    <script>
+      function openImage(src) {
+        const modalImg = document.getElementById('modalImage');
+        modalImg.src = src;
+
+        const modal = new bootstrap.Modal(document.getElementById('imageModal'));
+        modal.show();
+      }
     </script>
   </body>
 </html>

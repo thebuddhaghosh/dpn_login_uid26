@@ -2,6 +2,7 @@ body {
   height: 100vh;
   display: grid;
   place-items: center;
+  background-image: url("../img/bgpn.png");
   animation: panoramic-bg 580s linear infinite;
   background-size: cover;
   background-position-x: 0%;
@@ -19,22 +20,6 @@ body .panoramic-bg {
   width: 100%;
   z-index: 9;
   box-shadow: 0 2px 10px rgba(255, 255, 255, 0.7);
-}
-body .panoramic-bg::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-  width: 100%;
-  height: 560px;
-  border-radius: 30px;
-  background-image: url("../img/login.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 1;
-  opacity: 0.1;
 }
 body .panoramic-bg img {
   width: 100%;
@@ -201,6 +186,55 @@ body .loginOffcanvas .offcanvas-body::before {
   background-image: url("../img/bottomTexture.png");
   background-repeat: no-repeat;
   z-index: -1;
+}
+
+.about-darpan .offcanvas-body {
+  padding: 18px 50px;
+}
+.about-darpan .offcanvas-body .offcanvas-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+.about-darpan .offcanvas-body .offcanvas-title .offcanvas-subtitle {
+  font-size: 18px;
+  font-weight: 600;
+}
+.about-darpan .offcanvas-body .text-1 {
+  font-size: 14px;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.gallery-container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+}
+.gallery-container .gallery-title {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.gallery-container .gallery-img {
+  width: 100%;
+  height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.gallery-container .gallery-img:hover {
+  transform: scale(1.05);
+}
+
+/* Modal image styling */
+.gallerymodal .modal-img {
+  width: 100%;
+  border-radius: 6px;
 }
 
 @keyframes panoramic-bg {
