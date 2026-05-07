@@ -2,8 +2,8 @@ body {
   height: 100vh;
   display: grid;
   place-items: center;
-  background-image: url("../img/bgpn.png");
-  animation: panoramic-bg 580s linear infinite;
+  background-image: url("../img/log-penoromic.png");
+  animation: panoramic-bg 80s linear infinite;
   background-size: cover;
   background-position-x: 0%;
   background-repeat: repeat-y;
@@ -206,35 +206,97 @@ body .loginOffcanvas .offcanvas-body::before {
   text-align: justify;
 }
 
-.gallery-container {
-  max-width: 900px;
-  margin: 40px auto;
-  background: #fff;
-  padding: 15px;
-  border-radius: 8px;
+.gallery-container-offcanvas .masonry-grid {
+  -moz-column-count: 2;
+       column-count: 2;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+  padding: 10px;
 }
-.gallery-container .gallery-title {
-  text-align: center;
-  font-weight: 600;
-  margin-bottom: 15px;
+.gallery-container-offcanvas .grid-item {
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  margin-bottom: 8px;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #eee;
 }
-.gallery-container .gallery-img {
+.gallery-container-offcanvas .grid-item img {
   width: 100%;
-  height: 180px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.gallery-container .gallery-img:hover {
-  transform: scale(1.05);
+  display: block;
+  height: auto;
+  border-radius: 4px;
 }
 
-/* Modal image styling */
 .gallerymodal .modal-img {
   width: 100%;
   border-radius: 6px;
+}
+
+.features-container-offcanvas .features-wrapper {
+  margin: 20px auto;
+  padding: 10px 12px 20px;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.features-container-offcanvas .features-wrapper::before, .features-container-offcanvas .features-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border: 2px dashed #d9d9d9;
+  border-radius: 50%;
+  opacity: 0.35;
+}
+.features-container-offcanvas .features-wrapper::before {
+  left: -60px;
+  top: 120px;
+}
+.features-container-offcanvas .features-wrapper::after {
+  right: -70px;
+  bottom: 80px;
+}
+.features-container-offcanvas .section-title {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+.features-container-offcanvas .feature-card {
+  background: #f3f3f3;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 12px;
+  transition: 0.3s;
+}
+.features-container-offcanvas .feature-card:hover {
+  transform: translateY(-2px);
+  background: #ececec;
+}
+.features-container-offcanvas .feature-icon {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 8px;
+  font-size: 22px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+.features-container-offcanvas .feature-content h6 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+}
+.features-container-offcanvas .feature-content p {
+  margin-top: 3px;
+  font-size: 10px;
+  line-height: 1.45;
+  color: #666;
 }
 
 @keyframes panoramic-bg {
